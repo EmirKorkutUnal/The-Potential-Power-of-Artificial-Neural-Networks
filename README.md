@@ -6,4 +6,14 @@ Since it's not my style to write complex descriptions which also would bore me, 
 Your input goes through a series of <b>"hidden layers"</b> to create an output. Unlike most other models, the evaluation and interpretation processes of variables use changing weights; this is why these models are called <b>"Black box models"</b> - because you don't precisely know what's going on inside your hidden layers. The limits for the changing variable weights can be found out, but the exact way to evaluate and calculate each output remains a mystery.<br><br>
 Let's see the potential power of these models compared to other methods.
 <h2>DISCLAIMER</h2>
-<b>Each and every dataset has its own unique characteristics. Remember, what works for you is best for you - you don't always need a more complicated model that you already have.</b>
+<b>Each and every dataset has its own unique characteristics. Remember, what works for your data is best for your data - you don't always need a more complicated model than you already have.</b>
+<h2>Methodology</h2>
+<h3>Data</h3>
+On this article, we'll go through a dataset that contains features of various diamonds. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
+<h3>Models</h3>
+Alongside ANN, some other methods are used to create a model based on the dataset. These are:
+<ul>
+  <li><b>Linear Regression</b></li>
+  <li><b>Generalized Additive Models</b></li>
+  <li><b>Polynomial Regression</b></li>
+</ul>

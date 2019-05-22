@@ -134,7 +134,7 @@ df.head()
     </tr>
   </tbody>
 </table>
-<h3>Preparing data: Turning categorical variables into interval variables, and dropping inxed column</h3>
+<h3>Preparing data: Turning categorical variables into interval variables, and dropping index column</h3>
 <pre>
 df['cut']=np.where(df['cut'] == 'Ideal', 5,
           np.where(df['cut'] == 'Premium', 4,
@@ -245,3 +245,8 @@ df.drop(['Unnamed: 0'], axis=1, inplace=True)
     </tr>
   </tbody>
 </table>
+<h3>Plotting data</h3>
+<pre>
+pd.plotting.scatter_matrix(df, figsize=(20, 20), marker='o', s=15)
+plt.show()                                  # You don't need this line for the code to work. It simply suppresses details of individual graphs which you probably don't need.
+</pre>

@@ -13,7 +13,8 @@ On this article, we'll go through a dataset that contains features of various di
 <h3>Models</h3>
 Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br>
 <ul>
-  <li><b>Linear Regression</b>: A model that tries to fit linear lines through your predictor and target variables. A relatively simple but effective tool.</li>
-  <li><b>Generalized Additive Models</b>: A model that </li>
-  <li><b>Polynomial Regression</b></li>
+  <li><b>Linear Regression</b>: Tries to fit linear lines through your predictor and target variables. A relatively simple but effective tool.</li>
+  <li><b>Generalized Additive Models</b>: Does the same thing as Linear Regression, plus uses some smoothing functions to increase accuracy.</li>
+  <li><b>Polynomial Regression</b>: Uses polynomial functions instead of straight lines.</li>
 </ul>
+You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a>.

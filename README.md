@@ -680,7 +680,7 @@ ResultCatcher['ANNError'] = ResultCatcher['ANNError'].abs()
 ResultCatcher.head()
 </pre>
 First we get the actual data into the dataframe. Then, we add predictions one by one, substract them from the actuals and getting the absolute values to calculate sum of errors.<br>
-<table border="1" class="dataframe">
+<table>
   <thead>
     <tr style="text-align: right;">
       <th></th>

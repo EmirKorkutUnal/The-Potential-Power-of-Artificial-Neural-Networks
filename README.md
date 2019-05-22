@@ -252,3 +252,26 @@ plt.show()        # You don't need this line for the code to work. It simply sup
 </pre>
 <img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/PairPlots.png">
 We can already see some correlations between our target variable price and other variables. At the first glance, Polynomial Regression seems to fit this dataset better than Linear Regression because of curvilinear correlations of price with carat, x, y, and z variables; but we'll use all our methods and let the numbers play a decisive role rather than our geometry skills.
+<h3>Defining target and predictors</h3>
+<pre>
+y = df.filter(['price'])
+x = df.drop(['price'], axis=1)
+</pre><br>
+For Linear Regression to work properly, we need a constant variable. We add this with the following line:
+<pre>
+x1 = sm.add_constant(x)
+</pre>
+<h2>Removing Collinearity for Linear Regression and GAM</h2>
+When using Linear Regression or GAM, collinear variables alter the model's ability to interpret variable importance, so it's wise to remove variables which cause collinearity.
+<pre>
+vif = pd.DataFrame()
+vif["VIF Factor"] = [outliers_influence.variance_inflation_factor(x1.values, i) for i in range(x1.shape[1])]
+vif["features"] = x1.columns
+vif.sort_values('VIF Factor', inplace=True, ascending=False)
+vif.round(1)
+</pre>
+
+
+<br>
+After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provided more information than y by itself so we're including carat into the model rather than y.<br>
+Final collinearity table looks like this:

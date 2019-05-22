@@ -452,7 +452,7 @@ LinearModel.summary()
   <th>table</th>   <td>  -29.3051</td> <td>    4.243</td> <td>   -6.906</td> <td> 0.000</td> <td>  -37.622</td> <td>  -20.988</td>
 </tr>
 </tbody></table>
-With all variables having a meaningful effect, the model achieves a 0.904 R-square; more that 90% of all price variance is explained by these variables in this model. This is a very good score. Let's see if we can get something better.
+With all variables having a meaningful effect, the model achieves a 0.904 R-squared; more that 90% of all price variance is explained by these variables in this model. This is a very good score. Let's see if we can get something better.
 <h2>GAM</h2>
 <pre>
 gam = LinearGAM(terms='auto').fit(x_train1, y_train)
@@ -583,4 +583,5 @@ gam.summary()
 </tr>
 </tbody>
 </table>
-* LinearGAM doesn't produce a beautiful output table. You can copy the output to Word, then created and html to get this kind of a table.
+* LinearGAM doesn't produce a beautiful output table. You can copy the output to Word, create a table and save it as an html to get this kind of a table.<br><br>
+The R-squared has risen to 0.933. This model seems to have better predictive power than the previous one.

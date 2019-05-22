@@ -11,9 +11,9 @@ Let's see the potential power of these models compared to other methods.
 <h3>Data</h3>
 On this article, we'll go through a dataset that contains features of various diamonds. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
 <h3>Models</h3>
-Alongside ANN, some other methods are used to create a model based on the dataset. These are:
+Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br>
 <ul>
-  <li><b>Linear Regression</b></li>
-  <li><b>Generalized Additive Models</b></li>
+  <li><b>Linear Regression</b>: A model that tries to fit linear lines through your predictor and target variables. A relatively simple but effective tool.</li>
+  <li><b>Generalized Additive Models</b>: A model that </li>
   <li><b>Polynomial Regression</b></li>
 </ul>

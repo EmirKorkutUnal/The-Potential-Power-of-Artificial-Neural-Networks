@@ -773,7 +773,7 @@ ResultCatcher['ANNError'].sum()
 7964400.5
 </pre>
 <b>ANN has done it!</b><br>
-In a dataset where the total price of diamonds is around 106 million $, total error of ANN is just around 8 million $, which is 2.3 million $ better than the next best model.<br>
+In a dataset where the total price of diamonds is around 106 million $, total error of ANN is just around 8 million $, which is 2.3 million $ better than the next best model.<br><br>
 Let's look at the visual representation on predictions.
 <pre>
 ax = ResultCatcher.plot.scatter(x='Actual',y='LinearPred', c='purple', s=25, figsize=(15,15))
@@ -782,3 +782,4 @@ ResultCatcher.plot.scatter(x='Actual',y='PolynomPred', c='orange', s=25, ax=ax)
 ResultCatcher.plot.scatter(x='Actual',y='ANNPred', c='green', s=25, ax=ax)
 plt.plot([0, 19000], [0, 19000], c='black', ls='--')
 </pre>
+<img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/AllPred.png">

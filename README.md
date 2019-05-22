@@ -782,7 +782,7 @@ ResultCatcher.plot.scatter(x='Actual',y='PolynomPred', c='orange', s=25, ax=ax)
 ResultCatcher.plot.scatter(x='Actual',y='ANNPred', c='green', s=25, ax=ax)
 plt.plot([0, 19000], [0, 19000], c='black', ls='--')
 </pre>
-Here, the black line represents the ideal predictions. Keep in mind that if you hit that line on all your predictions, you might have overfit your model.<br><br>
+Here, the black line represents the ideal predictions. Keep in mind that if you hit that line on all your predictions, you most likely have overfit your model.<br><br>
 Purple dots represent predictions of the Linear Regression.<br>
 Red dots represent predictions of the GAM.<br>
 Orange dots represent predictions of the Polynomial Regression.<br>

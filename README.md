@@ -789,7 +789,7 @@ Orange dots represent predictions of the Polynomial Regression.<br>
 Green dots represent predictions of the ANN.<br>
 <img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/AllPred.png"><br><br>
 Linear regression starts failing about the median price range and predicts lower values for high-end diamonds. GAM seems to work better, but produces some very-off-the-mark predictions. Polynomial Regression has a relatively thin cluster of dots, which means errors are smaller. ANN has the leanest cluster of dots, doesn't overreact, starts with great accuracy at low-end and keeps the accuracy until the very high-end range.
-<h2>Conclusion</h>
+<h2>Conclusion</h2>
 Artifical Neural Networks have the potential to make better predictions that other regression methods.<br><br>
 Remember that the results would vary depending on the nature of the dataset. Also, in cases where a relatively low predictive power is deemed enough, a simpler model could be what you might need.<br><br>
 On the other hand, calculating all the epochs took much more time than all other models combined; so computational power limitations apply for real world problems. Sometimes, sampling a small part of your data might save you a lot of time and still deliver great results.<br><br><br>

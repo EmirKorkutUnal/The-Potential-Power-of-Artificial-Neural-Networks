@@ -484,7 +484,7 @@ gam.summary()
 <p>AICc:</p>
 <p>GCV:</p>
 <p>Scale:</p>
-<p>Pseudo</p>
+<p>Pseudo R-Squared:</p>
 </td>
 <td colspan="2" width="144">
 <p>49.4536</p>
@@ -493,7 +493,7 @@ gam.summary()
 <p>798655.9759</p>
 <p>1076116.4033</p>
 <p>1072565.1844</p>
-<p>R-Squared:</p>
+<p>0.9327</p>
 </td>
 </tr>
 <tr>

@@ -458,263 +458,139 @@ With all variables having a meaningful effect, the model achieves a 0.904 R-squa
 gam = LinearGAM(terms='auto').fit(x_train1, y_train)
 gam.summary()
 </pre>
-<tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:8.5pt">
-  <td width="623" colspan="8" valign="top" style="width:467.5pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:8.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">LinearGAM </p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:1;height:97.6pt">
-  <td width="176" colspan="2" valign="top" style="width:132.2pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0in 5.4pt 0in 5.4pt;height:97.6pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Distribution:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Link Function:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Number of Samples:</p>
-  </td>
-  <td width="147" colspan="2" valign="top" style="width:110.4pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:97.6pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Normal Dist</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">IdentityLink</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">26970</p>
-  </td>
-  <td width="156" colspan="2" valign="top" style="width:117.15pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:97.6pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Effective DoF:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Log Likelihood:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">AIC:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">AICc:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">GCV:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Scale:</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Pseudo</p>
-  </td>
-  <td width="144" colspan="2" valign="top" style="width:107.75pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:97.6pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">49.4536</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">-399277.4379</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">798655.783</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">798655.9759</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1076116.4033</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1072565.1844</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">R-Squared:</p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:2">
-  <td width="121" valign="top" style="width:91.05pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Feature Function<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span></p>
-  </td>
-  <td width="97" colspan="2" valign="top" style="width:72.65pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Lambda<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-  </td>
-  <td width="105" valign="top" style="width:78.9pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Rank<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-  </td>
-  <td width="106" valign="top" style="width:79.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">EDoF<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-  </td>
-  <td width="88" colspan="2" valign="top" style="width:65.95pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">P &gt; x<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
-  </td>
-  <td width="106" valign="top" style="width:79.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Sig. Code</p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:3;height:107.5pt">
-  <td width="121" valign="top" style="width:91.05pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(0)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(1)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(2)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(3)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(4)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(5)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">s(6)</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">intercept</p>
-  </td>
-  <td width="97" colspan="2" valign="top" style="width:72.65pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">[0.6]</p>
-  </td>
-  <td width="105" valign="top" style="width:78.9pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">20</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1</p>
-  </td>
-  <td width="106" valign="top" style="width:79.5pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.0</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">12.3</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">4.0</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">6.0</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">7.0</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">10.5</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">8.7</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">0.0</p>
-  </td>
-  <td width="88" colspan="2" valign="top" style="width:65.95pt;border-top:none;
-  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.67e-10</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.49e-09</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">1.11e-16</p>
-  </td>
-  <td width="106" valign="top" style="width:79.45pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:107.5pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">***</p>
-  </td>
- </tr>
- <tr style="mso-yfti-irow:4;mso-yfti-lastrow:yes">
-  <td width="623" colspan="8" valign="top" style="width:467.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0in 5.4pt 0in 5.4pt">
-  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal">Significance codes:<span style="mso-spacerun:yes">&nbsp; </span>0 '***'
-  0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</p>
-  </td>
- </tr>
- <!--[if !supportMisalignedColumns]-->
- <tr height="0">
-  <td width="121" style="border:none"></td>
-  <td width="55" style="border:none"></td>
-  <td width="42" style="border:none"></td>
-  <td width="105" style="border:none"></td>
-  <td width="106" style="border:none"></td>
-  <td width="50" style="border:none"></td>
-  <td width="38" style="border:none"></td>
-  <td width="106" style="border:none"></td>
- </tr>
- <!--[endif]-->
+<table>
+<tbody>
+<tr>
+<td colspan="8" width="623">
+<p>LinearGAM</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="176">
+<p>Distribution:</p>
+<p>Link Function:</p>
+<p>Number of Samples:</p>
+</td>
+<td colspan="2" width="147">
+<p>Normal Dist</p>
+<p>IdentityLink</p>
+<p>26970</p>
+</td>
+<td colspan="2" width="156">
+<p>Effective DoF:</p>
+<p>Log Likelihood:</p>
+<p>AIC:</p>
+<p>AICc:</p>
+<p>GCV:</p>
+<p>Scale:</p>
+<p>Pseudo</p>
+</td>
+<td colspan="2" width="144">
+<p>49.4536</p>
+<p>-399277.4379</p>
+<p>798655.783</p>
+<p>798655.9759</p>
+<p>1076116.4033</p>
+<p>1072565.1844</p>
+<p>R-Squared:</p>
+</td>
+</tr>
+<tr>
+<td width="121">
+<p>Feature Function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</td>
+<td colspan="2" width="97">
+<p>Lambda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</td>
+<td width="105">
+<p>Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</td>
+<td width="106">
+<p>EDoF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</td>
+<td colspan="2" width="88">
+<p>P &gt; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+</td>
+<td width="106">
+<p>Sig. Code</p>
+</td>
+</tr>
+<tr>
+<td width="121">
+<p>s(0)</p>
+<p>s(1)</p>
+<p>s(2)</p>
+<p>s(3)</p>
+<p>s(4)</p>
+<p>s(5)</p>
+<p>s(6)</p>
+<p>intercept</p>
+</td>
+<td colspan="2" width="97">
+<p>[0.6]</p>
+<p>[0.6]</p>
+<p>[0.6]</p>
+<p>[0.6]</p>
+<p>[0.6]</p>
+<p>[0.6]</p>
+<p>[0.6]</p>
+</td>
+<td width="105">
+<p>20</p>
+<p>20</p>
+<p>20</p>
+<p>20</p>
+<p>20</p>
+<p>20</p>
+<p>20</p>
+<p>1</p>
+</td>
+<td width="106">
+<p>1.0</p>
+<p>12.3</p>
+<p>4.0</p>
+<p>6.0</p>
+<p>7.0</p>
+<p>10.5</p>
+<p>8.7</p>
+<p>0.0</p>
+</td>
+<td colspan="2" width="88">
+<p>1.11e-16</p>
+<p>1.11e-16</p>
+<p>1.67e-10</p>
+<p>1.11e-16</p>
+<p>1.11e-16</p>
+<p>1.11e-16</p>
+<p>1.49e-09</p>
+<p>1.11e-16</p>
+</td>
+<td width="106">
+<p>***</p>
+<p>***</p>
+<p>***</p>
+<p>***</p>
+<p>***</p>
+<p>***</p>
+<p>***</p>
+<p>***</p>
+</td>
+</tr>
+<tr>
+<td colspan="8" width="623">
+<p>Significance codes:&nbsp; 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</p>
+</td>
+</tr>
+<tr>
+<td width="121">&nbsp;</td>
+<td width="55">&nbsp;</td>
+<td width="42">&nbsp;</td>
+<td width="105">&nbsp;</td>
+<td width="106">&nbsp;</td>
+<td width="50">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="106">&nbsp;</td>
+</tr>
 </tbody>
-
+</table>
+<p>&nbsp;</p>

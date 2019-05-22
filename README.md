@@ -3,10 +3,10 @@ A report about the power of Artifical Neural Networks and how they compare with 
 <h2>Brief Description</h2>
 Since it's not my style to write complex descriptions which also would bore me, I'm going to keep this part short.<br>
 <b>Artifical Neural Networks</b> is the name given to a method use for modeling data. Just like any other data modeling method, you can train an ANN to make predictions.<br><br>
-Your input goes through a series of <b>"hidden layers"</b> to create an output. Unlike most other models, the evaluation and interpretation processes of variables use changing weights; this is why these models are called <b>"Black box models"</b> - because you don't precisely know what's going on inside your hidden layers. The limits for the changing variable weights can be found out, but the exact way to evaluate and calculate each output remains a mystery.<br><br>
+Your input goes through a series of <b>"hidden layers"</b> to create an output. Unlike most other models, the evaluation and interpretation processes of variables use changing weights; this is why these models are called <b>"Black box models"</b> - you don't precisely know what's going on inside your hidden layers. The limits for the changing variable weights can be found out, but the exact way to evaluate and calculate each output remains a mystery.<br><br>
 Let's see the potential power of these models compared to other methods.
 <h2>DISCLAIMER</h2>
-<b>Each and every dataset has its own unique characteristics. Remember, what works for your data is best for your data - you don't always need a more complicated model than you already have.</b>
+<b>Each and every dataset has its own unique characteristics. Remember, what works for your data is best for your data; you don't always need a more complicated model than you already have.</b>
 <h2>Methodology</h2>
 <h3>Data</h3>
 On this article, we'll go through a dataset that contains features of various diamonds. Our target variable will be <b>price</b>. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
@@ -385,7 +385,7 @@ Final collinearity table looks like this:
 </table>
 <h3>Train Test Split</h3>
 This tool is used for splitting databases into two groups, using one part to train the model and the other to test the model on.<br>
-We need train and test data with constants for Linear Regression and GAM, and without constants for Polynomial Regression and ANN. Because of this, we're splitting the data without the constants and adding constants afterwards. Alternatively, you can make two splits (one with and one without constants); if you want to go that way, remember to use the same random_state for both splits for a fair comparison. Random state parameter accepts integers.
+We need train and test data with constants for Linear Regression and GAM, and without constants for Polynomial Regression and ANN. Because of this, we're splitting the data without the constants and adding constants afterwards. Alternatively, you can make two splits (one with and one without constants). If you want to go that way, remember to use the same random_state for both splits for a fair comparison. Random state parameter accepts integers.
 <pre>
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=7)
 x_train1 = sm.add_constant(x_train)
@@ -396,7 +396,7 @@ x_test1 = sm.add_constant(x_test)
 LinearModel = sm.OLS(y_train,x_train1).fit()
 LinearModel.summary()
 </pre>
-<table class="simpletable">
+<table>
 <caption>OLS Regression Results</caption>
 <tbody><tr>
   <th>Dep. Variable:</th>          <td>price</td>      <th>  R-squared:         </th>  <td>   0.904</td>  
@@ -427,7 +427,7 @@ LinearModel.summary()
 </tr>
 </tbody></table>
 
-<table class="simpletable">
+<table>
 <tbody><tr>
      <td></td>        <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P&gt;|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
@@ -453,7 +453,7 @@ LinearModel.summary()
   <th>table</th>   <td>  -29.3051</td> <td>    4.243</td> <td>   -6.906</td> <td> 0.000</td> <td>  -37.622</td> <td>  -20.988</td>
 </tr>
 </tbody></table>
-With all variables having a meaningful effect, the model achieves a 0.904 R-squared; more that 90% of all price variance is explained by these variables in this model. This is a very good score. Let's see if we can get something better.
+With all variables having a meaningful effect, the model achieves a 0.904 R-squared; more that 90% of all price variance is explained by the variables in this model. This is a very good score. Let's see if we can get something better.
 <h2>GAM</h2>
 <pre>
 gam = LinearGAM(terms='auto').fit(x_train1, y_train)
@@ -595,14 +595,14 @@ PolyReg = LinearRegression()
 PolyReg.fit(x_train_model,y_train)
 y_train_pred = PolyReg.predict(x_train_model)
 </pre>
+Here is a Polynomial Regression up to the 3rd degree is used. Using a higher degree would cause overfitting, which in turn would reduce the predictive power of the model on other databases.
 <pre>
 r2_score(y_train, y_train_pred)
 0.972253547295967
 </pre>
-This is only getting better! Our Polynomial Regression model has achieved an R-squared of 0.972.<br>
-Here is a Regression up to the 3rd degree is used. Using a higher degree would cause overfitting, which in turn would reduce the predictive power of the model on other databases.
+This is only getting better! The Polynomial Regression model has achieved an R-squared of 0.972.
 <h2>Artifical Neural Network</h2>
-Here comes the challenger.
+<b>Here comes the challenger.</b>
 <pre>
 scaler = MinMaxScaler()
 scaler.fit(x)
@@ -629,7 +629,7 @@ The model will stop working if it can't find a higher accuracy within 50 epochs 
 <pre>
 model.fit(x_train_scaled, y_train, validation_split=0.2, epochs=350, callbacks=[early_stopping_monitor])
 </pre>
-We will run 350 epochs. Validation split divides the data into 2 parts; the model uses current variable weights on the split part.
+We will run 350 epochs. Validation split divides the data into 2 parts; the model uses current variable weights on the split part to  evaluate loss and other metrics at the end of each epoch.
 <pre>
 Train on 21576 samples, validate on 5394 samples
 Epoch 1/350
@@ -650,7 +650,7 @@ Epoch 264/350
 21576/21576 [==============================] - 1s 48us/step - loss: 305553.2489 - acc: 0.0018 - val_loss: 320475.0645 - val_acc: 0.0011
 </pre>
 Epoch 214 had such a low value loss (307494.0236) that the next 50 epochs couldn't reach that number.<br>
-The model is accepted as it is in the 214. epoch.<br>
+The model is accepted as it is in the 214. epoch.<br><br>
 Let's keep things a little bit interesting by not calculating the R-squared for this model.
 <h2>Comparisons</h2>
 <h3>Getting Predictions</h3>
@@ -679,7 +679,7 @@ ResultCatcher['ANNError'] = ResultCatcher['Actual'] - ResultCatcher['ANNPred']
 ResultCatcher['ANNError'] = ResultCatcher['ANNError'].abs()
 ResultCatcher.head()
 </pre>
-First we get the actual data into the dataframe. Then, we add predictions one by one, substract them from the actuals and getting the absolute values to calculate sum of errors.<br>
+First we insert the actual data into the dataframe. Then we add predictions into seperate columns, substract them from the actuals and get the absolute values of substractions to calculate sum of errors.<br>
 <table>
   <thead>
     <tr style="text-align: right;">
@@ -759,7 +759,7 @@ First we get the actual data into the dataframe. Then, we add predictions one by
   </tbody>
 </table>
 <br>
-Here comes the moment of truth:
+<i>Here comes the moment of truth:</i>
 <pre>
 ResultCatcher['Actual'].sum()
 105995144

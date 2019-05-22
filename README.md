@@ -9,7 +9,7 @@ Let's see the potential power of these models compared to other methods.
 <b>Each and every dataset has its own unique characteristics. Remember, what works for your data is best for your data - you don't always need a more complicated model than you already have.</b>
 <h2>Methodology</h2>
 <h3>Data</h3>
-On this article, we'll go through a dataset that contains features of various diamonds. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
+On this article, we'll go through a dataset that contains features of various diamonds. Our target variable will be <b>price</b>. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
 <h3>Models</h3>
 Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br><br>
 <ul>
@@ -248,6 +248,7 @@ df.drop(['Unnamed: 0'], axis=1, inplace=True)
 <h3>Plotting data</h3>
 <pre>
 pd.plotting.scatter_matrix(df, figsize=(20, 20), marker='o', s=15)
-plt.show()                                  # You don't need this line for the code to work. It simply suppresses details of individual graphs which you probably don't need.
+plt.show()        # You don't need this line for the code to work. It simply suppresses creation details of individual graphs which you probably don't need.
 </pre>
 <img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/PairPlots.png">
+We can already see some correlations between our target variable price and other variables. At the first glance, Polynomial Regression seems to fit this dataset better than Linear Regression because of curvilinear correlations, but we'll use all our methods and let the numbers play a decisive role rather than our geometry skills.

@@ -527,7 +527,7 @@ gam.summary()
 <p>s(6)</p>
 <p>intercept</p>
 </td>
-<td colspan="2" width="97">
+<td colspan="2" width="97" valign="top">
 <p>[0.6]</p>
 <p>[0.6]</p>
 <p>[0.6]</p>

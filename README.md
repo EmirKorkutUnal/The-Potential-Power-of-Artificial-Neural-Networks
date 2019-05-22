@@ -160,6 +160,7 @@ df['clarity']=np.where(df['clarity'] == 'FL', 11,
               np.where(df['clarity'] == 'I2', 2,
               np.where(df['clarity'] == 'I3', 1, 0)))))))))))
 df.drop(['Unnamed: 0'], axis=1, inplace=True)
+</pre>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

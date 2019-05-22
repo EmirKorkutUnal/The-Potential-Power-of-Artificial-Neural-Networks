@@ -462,7 +462,7 @@ gam.summary()
 <tbody>
 <tr>
 <td colspan="8" width="623">
-<p>LinearGAM*</p>
+<p><b>LinearGAM*</b></p>
 </td>
 </tr>
 <tr>
@@ -497,16 +497,16 @@ gam.summary()
 </tr>
 <tr>
 <td width="121">
-<p>Feature Function&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Feature Function</p>
 </td>
 <td colspan="2" width="97">
-<p>Lambda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Lambda</p>
 </td>
 <td width="105">
-<p>Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Rank</p>
 </td>
 <td width="66">
-<p>EDoF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>EDoF</p>
 </td>
 <td colspan="2" width="128">
 <p>P &gt; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>

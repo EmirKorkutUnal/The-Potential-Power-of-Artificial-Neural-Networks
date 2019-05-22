@@ -594,8 +594,29 @@ x_test_model = PolynomModel.fit_transform(x_test)
 PolyReg = LinearRegression()
 PolyReg.fit(x_train_model,y_train)
 y_train_pred = PolyReg.predict(x_train_model)
-r2_score(y_train, y_train_pred)
 </pre>
 <pre>
+r2_score(y_train, y_train_pred)
 0.972253547295967
 </pre>
+This is only getting better! Our Polynomial Regression model has achieved an R-squared of 0.972.<br>
+Here is a Regression up to the 3rd degree is used. Using a higher degree would cause overfitting, which in turn would reduce the predictive power of the model on other databases.
+<h2>Artifical Neural Network</h2>
+Here comes the challenger.
+<pre>
+scaler = MinMaxScaler()
+scaler.fit(x)
+x_train_scaled = scaler.transform(x_train)
+x_test_scaled = scaler.transform(x_test)
+</pre>
+Data is scaled to make the ANN work faster.
+<pre>
+model = Sequential()
+model.add(Dense(240, activation='selu', kernel_initializer='VarianceScaling', input_shape=(x_train.shape[1],)))
+model.add(Dense(200, activation='selu'))
+model.add(Dropout(0.1))
+model.add(Dense(160, activation='selu'))
+model.add(Dense(1))
+</pre>
+Our model has 3 dense layers and one dropout layer. More information about these parameters can be found <a href="https://keras.io/">here</a>.
+

@@ -611,16 +611,16 @@ x_test_scaled = scaler.transform(x_test)
 </pre>
 Data is scaled to make the ANN work faster.
 <pre>
-model = Sequential()
-model.add(Dense(240, activation='selu', kernel_initializer='VarianceScaling', input_shape=(x_train.shape[1],)))
-model.add(Dense(200, activation='selu'))
-model.add(Dropout(0.1))
-model.add(Dense(160, activation='selu'))
-model.add(Dense(1))
+ANN = Sequential()
+ANN.add(Dense(240, activation='selu', kernel_initializer='VarianceScaling', input_shape=(x_train.shape[1],)))
+ANN.add(Dense(200, activation='selu'))
+ANN.add(Dropout(0.1))
+ANN.add(Dense(160, activation='selu'))
+ANN.add(Dense(1))
 </pre>
 Our model has 3 dense layers and one dropout layer. More information about all parameters of a Keras model can be found <a href="https://keras.io/">here</a>.
 <pre>
-model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
+ANN.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 early_stopping_monitor = EarlyStopping(patience=50)
 </pre>
 Mean squared error is a good loss function for a linear model; compiler will also put accuracy metrics out.
@@ -648,4 +648,136 @@ Epoch 263/350
 21576/21576 [==============================] - 1s 48us/step - loss: 306798.4634 - acc: 0.0018 - val_loss: 326117.0869 - val_acc: 0.0028
 Epoch 264/350
 21576/21576 [==============================] - 1s 48us/step - loss: 305553.2489 - acc: 0.0018 - val_loss: 320475.0645 - val_acc: 0.0011
+</pre>
+Epoch 214 had such a low value loss (307494.0236) that the next 50 epochs couldn't reach that number.<br>
+The model is accepted as it is in the 214. epoch.<br>
+Let's keep things a little bit interesting by not calculating the R-squared for this model.
+<h2>Comparisons</h2>
+<h3>Getting Predictions</h3>
+Now that we have our models, let's get the predictions on test splits.
+<pre>
+LinPred = LinearModel.predict(x_test1)
+GAMPred = gam.predict(x_test1)
+PolynomPred = PolyReg.predict(x_test_model)
+ANNPred = ANN.predict(x_test_scaled)
+</pre>
+<h3>Creating a Dataset for All Predictions</h3>
+<pre>
+ResultCatcher = pd.DataFrame()
+ResultCatcher['Actual'] = y_test['price']
+ResultCatcher['LinearPred'] = LinPred
+ResultCatcher['LinearError'] = ResultCatcher['Actual'] - ResultCatcher['LinearPred']
+ResultCatcher['LinearError'] = ResultCatcher['LinearError'].abs()
+ResultCatcher['GAMPred'] = GAMPred
+ResultCatcher['GAMError'] = ResultCatcher['Actual'] - ResultCatcher['GAMPred']
+ResultCatcher['GAMError'] = ResultCatcher['GAMError'].abs()
+ResultCatcher['PolynomPred'] = PolynomPred
+ResultCatcher['PolynomError'] = ResultCatcher['Actual'] - ResultCatcher['PolynomPred']
+ResultCatcher['PolynomError'] = ResultCatcher['PolynomError'].abs()
+ResultCatcher['ANNPred'] = ANNPred
+ResultCatcher['ANNError'] = ResultCatcher['Actual'] - ResultCatcher['ANNPred']
+ResultCatcher['ANNError'] = ResultCatcher['ANNError'].abs()
+ResultCatcher.head()
+</pre>
+First we get the actual data into the dataframe. Then, we add predictions one by one, substract them from the actuals and getting the absolute values to calculate sum of errors.<br>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actual</th>
+      <th>LinearPred</th>
+      <th>LinearError</th>
+      <th>GAMPred</th>
+      <th>GAMError</th>
+      <th>PolynomPred</th>
+      <th>PolynomError</th>
+      <th>ANNPred</th>
+      <th>ANNError</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>40026</th>
+      <td>1110</td>
+      <td>596.665988</td>
+      <td>513.334012</td>
+      <td>363.240757</td>
+      <td>746.759243</td>
+      <td>1195.122775</td>
+      <td>85.122775</td>
+      <td>1132.304810</td>
+      <td>22.304810</td>
+    </tr>
+    <tr>
+      <th>10489</th>
+      <td>4796</td>
+      <td>4478.358644</td>
+      <td>317.641356</td>
+      <td>3971.435741</td>
+      <td>824.564259</td>
+      <td>3813.311488</td>
+      <td>982.688512</td>
+      <td>3759.696045</td>
+      <td>1036.303955</td>
+    </tr>
+    <tr>
+      <th>4454</th>
+      <td>3619</td>
+      <td>3928.927893</td>
+      <td>309.927893</td>
+      <td>3449.888087</td>
+      <td>169.111913</td>
+      <td>3354.951283</td>
+      <td>264.048717</td>
+      <td>3546.336182</td>
+      <td>72.663818</td>
+    </tr>
+    <tr>
+      <th>20007</th>
+      <td>8545</td>
+      <td>6991.487747</td>
+      <td>1553.512253</td>
+      <td>6760.050738</td>
+      <td>1784.949262</td>
+      <td>7906.252037</td>
+      <td>638.747963</td>
+      <td>8136.331055</td>
+      <td>408.668945</td>
+    </tr>
+    <tr>
+      <th>30486</th>
+      <td>732</td>
+      <td>64.540431</td>
+      <td>667.459569</td>
+      <td>488.569175</td>
+      <td>243.430825</td>
+      <td>582.274651</td>
+      <td>149.725349</td>
+      <td>640.250549</td>
+      <td>91.749451</td>
+    </tr>
+  </tbody>
+</table>
+<br><br>
+Here comes the moment of truth:
+<pre>
+ResultCatcher['Actual'].sum()
+105995144
+ResultCatcher['LinearError'].sum()
+23072830.201535575
+ResultCatcher['GAMError'].sum()
+18760907.342161603
+ResultCatcher['PolynomError'].sum()
+10333892.45053555
+ResultCatcher['ANNError'].sum()
+7964400.5
+</pre>
+<b>ANN has done it!</b><br>
+In a dataset where the total price of diamonds is around 106 million $, total error of ANN is just around 8 million $, which is 2.3 million $ better than the next best model.
+<pre>
+ax = ResultCatcher.plot.scatter(x='Actual',y='LinearPred', c='purple', s=25, figsize=(15,15))
+ResultCatcher.plot.scatter(x='Actual',y='GAMPred', c='red', s=25, ax=ax)
+ResultCatcher.plot.scatter(x='Actual',y='PolynomPred', c='orange', s=25, ax=ax)
+ResultCatcher.plot.scatter(x='Actual',y='ANNPred', c='green', s=25, ax=ax)
+plt.plot([0, 19000], [0, 19000], c='black', ls='--')
 </pre>

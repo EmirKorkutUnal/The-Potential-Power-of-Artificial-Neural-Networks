@@ -11,13 +11,15 @@ Let's see the potential power of these models compared to other methods.
 <h3>Data</h3>
 On this article, we'll go through a dataset that contains features of various diamonds. Our target variable will be <b>price</b>. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
 <h3>Models</h3>
-Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br><br>
+Alongside ANN, some other methods are used to create various models based on the same dataset. These are:<br><br>
 <ul>
   <li><b>Linear Regression</b>: Tries to fit linear lines through your predictor and target variables. A relatively simple but effective tool.</li>
   <li><b>Generalized Additive Models</b>: Does the same thing as Linear Regression, plus uses some smoothing functions to increase accuracy.</li>
   <li><b>Polynomial Regression</b>: Uses polynomial functions instead of straight lines.</li>
 </ul>
-You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a> and explaining these ascends the scope of this article.<br>
+You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a> and explaining these ascends the scope of this article.
+<h3>Comparison</h3>
+At the end of this article, all models will be compared for prediction accuracy. This will be done both by calculating total errors of models, and by graphical comparisın of all models versus the ideal prediction line.<br>
 Let's start.
 <h2>Loading Modules and Dataset in Jupyter</h2>
 <pre>
@@ -389,3 +391,60 @@ x_train1 = sm.add_constant(x_train)
 x_test1 = sm.add_constant(x_test)
 </pre>
 <h2>Linear Regression</h2>
+<pre>
+LinearModel = sm.OLS(y_train,x_train1).fit()
+LinearModel.summary()
+</pre>
+<tbody><tr>
+  <th>Dep. Variable:</th>          <td>price</td>      <th>  R-squared:         </th>  <td>   0.904</td>  
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th>  <td>   0.904</td>  
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>  <td>4.255e+04</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Wed, 22 May 2019</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
+</tr>
+<tr>
+  <th>Time:</th>                 <td>00:14:18</td>     <th>  Log-Likelihood:    </th> <td>-2.3022e+05</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td> 26970</td>      <th>  AIC:               </th>  <td>4.604e+05</td> 
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td> 26963</td>      <th>  BIC:               </th>  <td>4.605e+05</td> 
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     6</td>      <th>                     </th>      <td> </td>     
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>      <td> </td>     
+</tr>
+</tbody>
+<tbody><tr>
+     <td></td>        <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P&gt;|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>   <td>-2977.5273</td> <td>  549.910</td> <td>   -5.415</td> <td> 0.000</td> <td>-4055.380</td> <td>-1899.674</td>
+</tr>
+<tr>
+  <th>carat</th>   <td> 8788.0993</td> <td>   18.068</td> <td>  486.393</td> <td> 0.000</td> <td> 8752.685</td> <td> 8823.513</td>
+</tr>
+<tr>
+  <th>cut</th>     <td>  115.6685</td> <td>    8.228</td> <td>   14.058</td> <td> 0.000</td> <td>   99.541</td> <td>  131.796</td>
+</tr>
+<tr>
+  <th>color</th>   <td>  312.8370</td> <td>    4.679</td> <td>   66.863</td> <td> 0.000</td> <td>  303.666</td> <td>  322.008</td>
+</tr>
+<tr>
+  <th>clarity</th> <td>  513.7157</td> <td>    4.995</td> <td>  102.839</td> <td> 0.000</td> <td>  503.925</td> <td>  523.507</td>
+</tr>
+<tr>
+  <th>depth</th>   <td>  -54.3952</td> <td>    6.019</td> <td>   -9.037</td> <td> 0.000</td> <td>  -66.193</td> <td>  -42.597</td>
+</tr>
+<tr>
+  <th>table</th>   <td>  -29.3051</td> <td>    4.243</td> <td>   -6.906</td> <td> 0.000</td> <td>  -37.622</td> <td>  -20.988</td>
+</tr>
+</tbody>

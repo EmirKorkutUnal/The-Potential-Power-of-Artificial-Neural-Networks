@@ -1,5 +1,5 @@
 <h1>The Potential Power of Artificial Neural Networks</h1>
-A report about the power of Artifical Neural Networks and how they compare with Linear Regression, Generalized Additive Models, and Polynomial Regression.
+A report about the power of Artifical Neural Networks and how they compare with Linear Regression, Generalized Additive Models, and Polynomial Regression withon Python.
 <h2>Brief Description</h2>
 Since it's not my style to write complex descriptions which also would bore me, I'm going to keep this part short.<br>
 <b>Artifical Neural Networks</b> is the name given to a method use for modeling data. Just like any other data modeling method, you can train an ANN to make predictions.<br><br>
@@ -11,10 +11,13 @@ Let's see the potential power of these models compared to other methods.
 <h3>Data</h3>
 On this article, we'll go through a dataset that contains features of various diamonds. The categorical variables can be turned into interval variables which makes our job easier. You can download this Kaggle dataset <a href="https://www.kaggle.com/shivam2503/diamonds/downloads/diamonds.zip/1">here</a>.
 <h3>Models</h3>
-Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br>
+Alongside ANN, some other methods are used to create a model based on the dataset. These are:<br><br>
 <ul>
   <li><b>Linear Regression</b>: Tries to fit linear lines through your predictor and target variables. A relatively simple but effective tool.</li>
   <li><b>Generalized Additive Models</b>: Does the same thing as Linear Regression, plus uses some smoothing functions to increase accuracy.</li>
   <li><b>Polynomial Regression</b>: Uses polynomial functions instead of straight lines.</li>
 </ul>
-You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a>.
+You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a>.<br>
+Let's start.
+<h2>Loading Modules and Dataset in Jupyter</h2>
+<

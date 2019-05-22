@@ -35,6 +35,7 @@ from pygam import LinearGAM, s, f, te                        # GAM
 
 from sklearn.linear_model import LinearRegression            # Polynomial Regression
 from sklearn.preprocessing import PolynomialFeatures
+from sklearn.metrics import r2_score
 
 from sklearn.preprocessing import MinMaxScaler               # Artifical Neural Network
 from keras.models import Sequential
@@ -585,3 +586,16 @@ gam.summary()
 </table>
 * LinearGAM doesn't produce a beautiful output table. You can copy the output to Word, create a table and save it as an html to get this kind of a table.<br><br>
 The R-squared has risen to 0.933. This model seems to have better predictive power than the previous one.
+<h2>Polynomial Regression</h2>
+<pre>
+PolynomModel = PolynomialFeatures(degree=3)
+x_train_model = PolynomModel.fit_transform(x_train)
+x_test_model = PolynomModel.fit_transform(x_test)
+PolyReg = LinearRegression()
+PolyReg.fit(x_train_model,y_train)
+y_train_pred = PolyReg.predict(x_train_model)
+r2_score(y_train, y_train_pred)
+</pre>
+<pre>
+0.972253547295967
+</pre>

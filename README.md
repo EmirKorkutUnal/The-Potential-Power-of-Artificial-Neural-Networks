@@ -506,10 +506,10 @@ gam.summary()
 <td width="105">
 <p>Rank</p>
 </td>
-<td width="66">
+<td width="88">
 <p>EDoF</p>
 </td>
-<td colspan="2" width="128">
+<td colspan="2" width="106">
 <p>P &gt; x</p>
 </td>
 <td width="106">

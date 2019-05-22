@@ -462,7 +462,7 @@ gam.summary()
 <tbody>
 <tr>
 <td colspan="8" width="623">
-<p>LinearGAM</p>
+<p>LinearGAM*</p>
 </td>
 </tr>
 <tr>
@@ -583,3 +583,4 @@ gam.summary()
 </tr>
 </tbody>
 </table>
+* LinearGAM doesn't produce a beautiful output table. You can copy the output to Word, then created and html to get this kind of a table.

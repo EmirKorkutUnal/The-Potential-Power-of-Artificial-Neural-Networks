@@ -783,3 +783,9 @@ ResultCatcher.plot.scatter(x='Actual',y='ANNPred', c='green', s=25, ax=ax)
 plt.plot([0, 19000], [0, 19000], c='black', ls='--')
 </pre>
 <img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/AllPred.png">
+Here, the black line represents the ideal predictions. Keep in mind that if you hit that line on all your predictions, you might have overfit your model.<br>
+Purple dots represent predictions of the <font color="purple">Linear Regression.</font><br>
+Red dots represent predictions of the <font color="red">GAM.</font><br>
+Orange dots represent predictions of the Polynomial Regression.<br>
+Green dots represent predictions of the ANN.<br>
+Linear regression starts failing after the median range of prices. GAM seems to work better, but produces some very-off-the-mark predictions. 

@@ -134,3 +134,128 @@ df.head()
     </tr>
   </tbody>
 </table>
+<h3>Preparing data: Turning categorical variables into interval variables, and dropping inxed column</h3>
+<pre>
+df['cut']=np.where(df['cut'] == 'Ideal', 5,
+          np.where(df['cut'] == 'Premium', 4,
+          np.where(df['cut'] == 'Very Good', 3,
+          np.where(df['cut'] == 'Good', 2,
+          np.where(df['cut'] == 'Fair', 1, 0)))))
+df['color']=np.where(df['color'] == 'D', 7,
+            np.where(df['color'] == 'E', 6,
+            np.where(df['color'] == 'F', 5,
+            np.where(df['color'] == 'G', 4,
+            np.where(df['color'] == 'H', 3,
+            np.where(df['color'] == 'I', 2,
+            np.where(df['color'] == 'J', 1, 0)))))))
+df['clarity']=np.where(df['clarity'] == 'FL', 11,
+              np.where(df['clarity'] == 'IF', 10,
+              np.where(df['clarity'] == 'VVS1', 9,
+              np.where(df['clarity'] == 'VVS2', 8,
+              np.where(df['clarity'] == 'VS1', 7,
+              np.where(df['clarity'] == 'VS2', 6,
+              np.where(df['clarity'] == 'SI1', 5,
+              np.where(df['clarity'] == 'SI2', 4,
+              np.where(df['clarity'] == 'I1', 3,
+              np.where(df['clarity'] == 'I2', 2,
+              np.where(df['clarity'] == 'I3', 1, 0)))))))))))
+df.drop(['Unnamed: 0'], axis=1, inplace=True)
+<div class="output_subarea output_html rendered_html output_result"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.23</td>
+      <td>5</td>
+      <td>6</td>
+      <td>4</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.21</td>
+      <td>4</td>
+      <td>6</td>
+      <td>5</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.23</td>
+      <td>2</td>
+      <td>6</td>
+      <td>7</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.29</td>
+      <td>4</td>
+      <td>2</td>
+      <td>6</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.31</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>

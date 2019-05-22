@@ -452,3 +452,32 @@ LinearModel.summary()
   <th>table</th>   <td>  -29.3051</td> <td>    4.243</td> <td>   -6.906</td> <td> 0.000</td> <td>  -37.622</td> <td>  -20.988</td>
 </tr>
 </tbody></table>
+With all variables having a meaningful effect, the model achieves a 0.904 R-square; more that 90% of all price variance is explained by these variables in this model. This is a very good score. Let's see if we can get something better.
+<h2>GAM</h2>
+<pre>
+gam = LinearGAM(terms='auto').fit(x_train1, y_train)
+gam.summary()
+</pre>
+LinearGAM<br>
+=============================================== ==========================================================<br>
+Distribution:                        NormalDist Effective DoF:                                     49.4536<br>
+Link Function:                     IdentityLink Log Likelihood:                               -399277.4379<br>
+Number of Samples:                        26970 AIC:                                            798655.783<br>
+                                                AICc:                                          798655.9759<br>
+                                                GCV:                                          1076116.4033<br>
+                                                Scale:                                        1072565.1844<br>
+                                                Pseudo R-Squared:                                   0.9327<br>
+==========================================================================================================<br>
+Feature Function                  Lambda               Rank         EDoF         P > x        Sig. Code   <br>
+================================= ==================== ============ ============ ============ ============<br>
+s(0)                              [0.6]                20           1.0          1.11e-16     ***         <br>
+s(1)                              [0.6]                20           12.3         1.11e-16     ***         <br>
+s(2)                              [0.6]                20           4.0          1.67e-10     ***         <br>
+s(3)                              [0.6]                20           6.0          1.11e-16     ***         <br>
+s(4)                              [0.6]                20           7.0          1.11e-16     ***         <br>
+s(5)                              [0.6]                20           10.5         1.11e-16     ***         <br>
+s(6)                              [0.6]                20           8.7          1.49e-09     ***         <br>
+intercept                                              1            0.0          1.11e-16     ***         <br>
+==========================================================================================================<br>
+Significance codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1                                       <br>
+

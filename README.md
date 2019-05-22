@@ -17,7 +17,8 @@ Alongside ANN, some other methods are used to create various models based on the
   <li><b>Generalized Additive Models</b>: Does the same thing as Linear Regression, plus uses some smoothing functions to increase accuracy.</li>
   <li><b>Polynomial Regression</b>: Uses polynomial functions instead of straight lines.</li>
 </ul>
-You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a> and explaining these ascends the scope of this article.
+You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a> and explaining these ascends the scope of this article.<br><br>
+Both GAM and ANN models in this article can be further improved to have better fit; but these improvements are unnecessary for the purpose of this article.
 <h3>Comparison</h3>
 At the end of this article, all models will be compared for prediction accuracy. This will be done both by calculating total errors of models, and by graphical comparisın of all models versus the ideal prediction line.<br>
 Let's start.

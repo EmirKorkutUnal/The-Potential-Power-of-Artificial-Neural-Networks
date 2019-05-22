@@ -425,3 +425,30 @@ LinearModel.summary()
   <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>      <td> </td>     
 </tr>
 </tbody></table>
+
+<table class="simpletable">
+<tbody><tr>
+     <td></td>        <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P&gt;|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>   <td>-2977.5273</td> <td>  549.910</td> <td>   -5.415</td> <td> 0.000</td> <td>-4055.380</td> <td>-1899.674</td>
+</tr>
+<tr>
+  <th>carat</th>   <td> 8788.0993</td> <td>   18.068</td> <td>  486.393</td> <td> 0.000</td> <td> 8752.685</td> <td> 8823.513</td>
+</tr>
+<tr>
+  <th>cut</th>     <td>  115.6685</td> <td>    8.228</td> <td>   14.058</td> <td> 0.000</td> <td>   99.541</td> <td>  131.796</td>
+</tr>
+<tr>
+  <th>color</th>   <td>  312.8370</td> <td>    4.679</td> <td>   66.863</td> <td> 0.000</td> <td>  303.666</td> <td>  322.008</td>
+</tr>
+<tr>
+  <th>clarity</th> <td>  513.7157</td> <td>    4.995</td> <td>  102.839</td> <td> 0.000</td> <td>  503.925</td> <td>  523.507</td>
+</tr>
+<tr>
+  <th>depth</th>   <td>  -54.3952</td> <td>    6.019</td> <td>   -9.037</td> <td> 0.000</td> <td>  -66.193</td> <td>  -42.597</td>
+</tr>
+<tr>
+  <th>table</th>   <td>  -29.3051</td> <td>    4.243</td> <td>   -6.906</td> <td> 0.000</td> <td>  -37.622</td> <td>  -20.988</td>
+</tr>
+</tbody></table>

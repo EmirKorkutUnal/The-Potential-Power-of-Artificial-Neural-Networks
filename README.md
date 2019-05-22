@@ -505,10 +505,10 @@ gam.summary()
 <td width="105">
 <p>Rank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td width="106">
+<td width="66">
 <p>EDoF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
-<td colspan="2" width="88">
+<td colspan="2" width="128">
 <p>P &gt; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
 <td width="106">
@@ -545,7 +545,7 @@ gam.summary()
 <p>20</p>
 <p>1</p>
 </td>
-<td width="106">
+<td width="66">
 <p>1.0</p>
 <p>12.3</p>
 <p>4.0</p>
@@ -555,7 +555,7 @@ gam.summary()
 <p>8.7</p>
 <p>0.0</p>
 </td>
-<td colspan="2" width="88">
+<td colspan="2" width="128">
 <p>1.11e-16</p>
 <p>1.11e-16</p>
 <p>1.67e-10</p>
@@ -581,16 +581,5 @@ gam.summary()
 <p>Significance codes:&nbsp; 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</p>
 </td>
 </tr>
-<tr>
-<td width="121">&nbsp;</td>
-<td width="55">&nbsp;</td>
-<td width="42">&nbsp;</td>
-<td width="105">&nbsp;</td>
-<td width="106">&nbsp;</td>
-<td width="50">&nbsp;</td>
-<td width="38">&nbsp;</td>
-<td width="106">&nbsp;</td>
-</tr>
 </tbody>
 </table>
-<p>&nbsp;</p>

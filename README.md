@@ -251,4 +251,4 @@ pd.plotting.scatter_matrix(df, figsize=(20, 20), marker='o', s=15)
 plt.show()        # You don't need this line for the code to work. It simply suppresses creation details of individual graphs which you probably don't need.
 </pre>
 <img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/PairPlots.png">
-We can already see some correlations between our target variable price and other variables. At the first glance, Polynomial Regression seems to fit this dataset better than Linear Regression because of curvilinear correlations, but we'll use all our methods and let the numbers play a decisive role rather than our geometry skills.
+We can already see some correlations between our target variable price and other variables. At the first glance, Polynomial Regression seems to fit this dataset better than Linear Regression because of curvilinear correlations of price with carat, x, y, and z variables; but we'll use all our methods and let the numbers play a decisive role rather than our geometry skills.

@@ -24,7 +24,7 @@ Let's start.
 import pandas as pd                                          # General tools
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split #
+from sklearn.model_selection import train_test_split
 
 import statsmodels.api as sm                                 # Linear Regression
 from statsmodels.stats import outliers_influence
@@ -332,7 +332,7 @@ vif.round(1)
   </tbody>
 </table>
 <br>
-After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provided more information than y by itself so we're including carat into the model rather than y.<br>
+After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provides more information than y by itself so we're including carat into the model rather than y.<br>
 Final collinearity table looks like this:
 <table border="1" class="dataframe">
   <thead>
@@ -380,3 +380,12 @@ Final collinearity table looks like this:
     </tr>
   </tbody>
 </table>
+<h3>Train Test Split</h3>
+This tool is used for splitting databases into two groups, using one part to train the model and the other to test the model on.<br>
+We need train and test data with constants for Linear Regression and GAM, and without constants for Polynomial Regression and ANN. Because of this, we're splitting the data without the constants and adding constants afterwards. Alternatively, you can make two splits (one with and one without constants); if you want to go that way, remember to use the same random_state for both splits for a fair comparison. Random state parameter accepts integers.
+<pre>
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.5, random_state=7)
+x_train1 = sm.add_constant(x_train)
+x_test1 = sm.add_constant(x_test)
+</pre>
+<h2>Linear Regression</h2>

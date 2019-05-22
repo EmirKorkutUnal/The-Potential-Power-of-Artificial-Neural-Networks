@@ -618,5 +618,34 @@ model.add(Dropout(0.1))
 model.add(Dense(160, activation='selu'))
 model.add(Dense(1))
 </pre>
-Our model has 3 dense layers and one dropout layer. More information about these parameters can be found <a href="https://keras.io/">here</a>.
-
+Our model has 3 dense layers and one dropout layer. More information about all parameters of a Keras model can be found <a href="https://keras.io/">here</a>.
+<pre>
+model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
+early_stopping_monitor = EarlyStopping(patience=50)
+</pre>
+Mean squared error is a good loss function for a linear model; compiler will also put accuracy metrics out.
+ANN models work by epochs. A single epoch is one run of the current model, which then transfers some of its knowledge to the next epoch. This way, the model <b>learns</b> to become better (have less error).
+The model will stop working if it can't find a higher accuracy within 50 epochs of the current best.
+<pre>
+model.fit(x_train_scaled, y_train, validation_split=0.2, epochs=350, callbacks=[early_stopping_monitor])
+</pre>
+We will run 350 epochs. Validation split divides the data into 2 parts; the model uses current variable weights on the split part.
+<pre>
+Train on 21576 samples, validate on 5394 samples
+Epoch 1/350
+21576/21576 [==============================] - 2s 83us/step - loss: 9723199.7011 - acc: 2.3174e-04 - val_loss: 1458203.2656 - val_acc: 0.0000e+00
+Epoch 2/350
+21576/21576 [==============================] - 1s 53us/step - loss: 1211157.4408 - acc: 5.0983e-04 - val_loss: 963016.2044 - val_acc: 0.0000e+00
+Epoch 3/350
+21576/21576 [==============================] - 1s 57us/step - loss: 830775.2467 - acc: 0.0010 - val_loss: 768013.6704 - val_acc: 7.4156e-04
+...
+Epoch 214/350
+21576/21576 [==============================] - 1s 56us/step - loss: 315732.8827 - acc: 0.0014 - val_loss: 307494.0236 - val_acc: 0.0019
+...
+Epoch 262/350
+21576/21576 [==============================] - 1s 49us/step - loss: 301791.3665 - acc: 0.0020 - val_loss: 308788.9588 - val_acc: 0.0015
+Epoch 263/350
+21576/21576 [==============================] - 1s 48us/step - loss: 306798.4634 - acc: 0.0018 - val_loss: 326117.0869 - val_acc: 0.0028
+Epoch 264/350
+21576/21576 [==============================] - 1s 48us/step - loss: 305553.2489 - acc: 0.0018 - val_loss: 320475.0645 - val_acc: 0.0011
+</pre>

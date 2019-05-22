@@ -260,7 +260,7 @@ We can already see some correlations between our target variable price and other
 <pre>
 y = df.filter(['price'])
 x = df.drop(['price'], axis=1)
-</pre><br>
+</pre>
 For Linear Regression to work properly, we need a constant variable. We add this with the following line:
 <pre>
 x1 = sm.add_constant(x)

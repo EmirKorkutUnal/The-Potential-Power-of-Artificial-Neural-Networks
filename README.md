@@ -20,4 +20,28 @@ Alongside ANN, some other methods are used to create a model based on the datase
 You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a>.<br>
 Let's start.
 <h2>Loading Modules and Dataset in Jupyter</h2>
-<
+<pre>
+# General tools
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+
+# Linear Regression
+import statsmodels.api as sm
+from statsmodels.stats import outliers_influence
+
+# GAM
+from pygam import LinearGAM, s, f, te
+
+# Polynomial Regression
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+
+# Artifical Neural Network
+from sklearn.preprocessing import MinMaxScaler
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+from keras.callbacks import EarlyStopping
+from keras import initializers
+</pre>

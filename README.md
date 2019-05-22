@@ -137,7 +137,8 @@ df.head()
     </tr>
   </tbody>
 </table>
-<h3>Preparing data: Turning categorical variables into interval variables, and dropping index column</h3>
+<h3>Preparing data</h3>
+We'll turn categorical variables into interval variables, and drop index column.
 <pre>
 df['cut']=np.where(df['cut'] == 'Ideal', 5,
           np.where(df['cut'] == 'Premium', 4,

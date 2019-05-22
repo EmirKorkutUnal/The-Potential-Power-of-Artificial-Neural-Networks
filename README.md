@@ -17,27 +17,120 @@ Alongside ANN, some other methods are used to create a model based on the datase
   <li><b>Generalized Additive Models</b>: Does the same thing as Linear Regression, plus uses some smoothing functions to increase accuracy.</li>
   <li><b>Polynomial Regression</b>: Uses polynomial functions instead of straight lines.</li>
 </ul>
-You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a>.<br>
+You can find more information on these methods <a href="https://www.google.com/search?ei=IsTkXLLOEfODk74Ps4uV6Ac&q=regression+types">all over the internet</a> and explaining these ascends the scope of this article.<br>
 Let's start.
 <h2>Loading Modules and Dataset in Jupyter</h2>
 <pre>
-# General tools
-import pandas as pd
+import pandas as pd                                          # General tools
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-# Linear Regression
-import statsmodels.api as sm
+
+import statsmodels.api as sm                                 # Linear Regression
 from statsmodels.stats import outliers_influence
-# GAM
-from pygam import LinearGAM, s, f, te
-# Polynomial Regression
-from sklearn.linear_model import LinearRegression
+
+from pygam import LinearGAM, s, f, te                        # GAM
+
+from sklearn.linear_model import LinearRegression            # Polynomial Regression
 from sklearn.preprocessing import PolynomialFeatures
-# Artifical Neural Network
-from sklearn.preprocessing import MinMaxScaler
+
+from sklearn.preprocessing import MinMaxScaler               # Artifical Neural Network
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.callbacks import EarlyStopping
 from keras import initializers
 </pre>
+<pre>
+df = pd.read_csv('C:/Users/Emir/Desktop/diamonds.csv')
+df.head()
+</pre>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>carat</th>
+      <th>cut</th>
+      <th>color</th>
+      <th>clarity</th>
+      <th>depth</th>
+      <th>table</th>
+      <th>price</th>
+      <th>x</th>
+      <th>y</th>
+      <th>z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0.23</td>
+      <td>Ideal</td>
+      <td>E</td>
+      <td>SI2</td>
+      <td>61.5</td>
+      <td>55.0</td>
+      <td>326</td>
+      <td>3.95</td>
+      <td>3.98</td>
+      <td>2.43</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>0.21</td>
+      <td>Premium</td>
+      <td>E</td>
+      <td>SI1</td>
+      <td>59.8</td>
+      <td>61.0</td>
+      <td>326</td>
+      <td>3.89</td>
+      <td>3.84</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0.23</td>
+      <td>Good</td>
+      <td>E</td>
+      <td>VS1</td>
+      <td>56.9</td>
+      <td>65.0</td>
+      <td>327</td>
+      <td>4.05</td>
+      <td>4.07</td>
+      <td>2.31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0.29</td>
+      <td>Premium</td>
+      <td>I</td>
+      <td>VS2</td>
+      <td>62.4</td>
+      <td>58.0</td>
+      <td>334</td>
+      <td>4.20</td>
+      <td>4.23</td>
+      <td>2.63</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0.31</td>
+      <td>Good</td>
+      <td>J</td>
+      <td>SI2</td>
+      <td>63.3</td>
+      <td>58.0</td>
+      <td>335</td>
+      <td>4.34</td>
+      <td>4.35</td>
+      <td>2.75</td>
+    </tr>
+  </tbody>
+</table>

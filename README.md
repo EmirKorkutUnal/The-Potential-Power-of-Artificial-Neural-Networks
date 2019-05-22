@@ -788,4 +788,4 @@ Purple dots represent predictions of the <font color="purple">Linear Regression.
 Red dots represent predictions of the <font color="red">GAM.</font><br>
 Orange dots represent predictions of the Polynomial Regression.<br>
 Green dots represent predictions of the ANN.<br>
-Linear regression starts failing after the median range of prices. GAM seems to work better, but produces some very-off-the-mark predictions. 
+Linear regression starts failing about the median price range and predicts lower values for high-end diamonds. GAM seems to work better, but produces some very-off-the-mark predictions. Polynomial Regression has a relatively thin cluster of dots, which means errors are smaller. ANN has the leanest cluster of dots, doesn't overreact, and keeps the accuracy until the very high-end range.  

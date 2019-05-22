@@ -509,7 +509,7 @@ gam.summary()
 <p>EDoF</p>
 </td>
 <td colspan="2" width="128">
-<p>P &gt; x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>P &gt; x</p>
 </td>
 <td width="106">
 <p>Sig. Code</p>
@@ -545,7 +545,7 @@ gam.summary()
 <p>20</p>
 <p>1</p>
 </td>
-<td width="66">
+<td width="68">
 <p>1.0</p>
 <p>12.3</p>
 <p>4.0</p>
@@ -555,7 +555,7 @@ gam.summary()
 <p>8.7</p>
 <p>0.0</p>
 </td>
-<td colspan="2" width="128">
+<td colspan="2" width="126">
 <p>1.11e-16</p>
 <p>1.11e-16</p>
 <p>1.67e-10</p>

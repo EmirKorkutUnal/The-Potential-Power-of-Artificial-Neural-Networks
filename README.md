@@ -270,8 +270,113 @@ vif["features"] = x1.columns
 vif.sort_values('VIF Factor', inplace=True, ascending=False)
 vif.round(1)
 </pre>
-
-
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>VIF Factor</th>
+      <th>features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6737.0</td>
+      <td>const</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>56.9</td>
+      <td>x</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>23.5</td>
+      <td>z</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.0</td>
+      <td>carat</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>20.5</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.7</td>
+      <td>depth</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.6</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.5</td>
+      <td>cut</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.2</td>
+      <td>clarity</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.1</td>
+      <td>color</td>
+    </tr>
+  </tbody>
+</table>
 <br>
 After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provided more information than y by itself so we're including carat into the model rather than y.<br>
 Final collinearity table looks like this:
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>VIF Factor</th>
+      <th>features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5334.2</td>
+      <td>const</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1.6</td>
+      <td>table</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.5</td>
+      <td>cut</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1.3</td>
+      <td>depth</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1.3</td>
+      <td>carat</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.2</td>
+      <td>clarity</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.1</td>
+      <td>color</td>
+    </tr>
+  </tbody>
+</table>

@@ -47,7 +47,7 @@ from keras import initializers
 df = pd.read_csv('C:/Users/Emir/Desktop/diamonds.csv')
 df.head()
 </pre>
-<table border="1" class="dataframe">
+<table>
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -165,7 +165,7 @@ df['clarity']=np.where(df['clarity'] == 'FL', 11,
               np.where(df['clarity'] == 'I3', 1, 0)))))))))))
 df.drop(['Unnamed: 0'], axis=1, inplace=True)
 </pre>
-<table border="1" class="dataframe">
+<table>
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -274,7 +274,7 @@ vif["features"] = x1.columns
 vif.sort_values('VIF Factor', inplace=True, ascending=False)
 vif.round(1)
 </pre>
-<table border="1" class="dataframe">
+<table>
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -337,7 +337,7 @@ vif.round(1)
 </table>
 After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provides more information than y by itself so we're including carat into the model rather than y.<br><br>
 Final collinearity table looks like this:
-<table class="dataframe">
+<table>
   <thead>
     <tr style="text-align: right;">
       <th></th>

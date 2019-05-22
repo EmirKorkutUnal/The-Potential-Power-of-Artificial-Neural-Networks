@@ -459,14 +459,17 @@ gam = LinearGAM(terms='auto').fit(x_train1, y_train)
 gam.summary()
 </pre>
 LinearGAM<br>
-=============================================== ==========================================================<br>
-Distribution:                        NormalDist Effective DoF:                                     49.4536<br>
-Link Function:                     IdentityLink Log Likelihood:                               -399277.4379<br>
-Number of Samples:                        26970 AIC:                                            798655.783<br>
-                                                AICc:                                          798655.9759<br>
-                                                GCV:                                          1076116.4033<br>
-                                                Scale:                                        1072565.1844<br>
-                                                Pseudo R-Squared:                                   0.9327<br>
+========================================<br>
+Distribution: NormalDist<br>
+Effective DoF: 49.4536<br>
+Link Function: IdentityLink<br>
+Log Likelihood: -399277.4379<br>
+Number of Samples: 26970<br>
+AIC: 798655.783<br>
+AICc: 798655.9759<br>
+GCV: 1076116.4033<br>
+Scale: 1072565.1844<br>
+Pseudo R-Squared: 0.9327<br>
 ==========================================================================================================<br>
 Feature Function                  Lambda               Rank         EDoF         P > x        Sig. Code   <br>
 ================================= ==================== ============ ============ ============ ============<br>

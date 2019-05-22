@@ -250,3 +250,4 @@ df.drop(['Unnamed: 0'], axis=1, inplace=True)
 pd.plotting.scatter_matrix(df, figsize=(20, 20), marker='o', s=15)
 plt.show()                                  # You don't need this line for the code to work. It simply suppresses details of individual graphs which you probably don't need.
 </pre>
+<img src="https://github.com/EmirKorkutUnal/The-Potential-Power-of-Artificial-Neural-Networks/blob/master/Images/PairPlots.png>

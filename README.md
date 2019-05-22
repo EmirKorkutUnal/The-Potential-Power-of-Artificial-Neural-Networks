@@ -623,8 +623,8 @@ Our model has 3 dense layers and one dropout layer. More information about all p
 ANN.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 early_stopping_monitor = EarlyStopping(patience=50)
 </pre>
-Mean squared error is a good loss function for a linear model; compiler will also put accuracy metrics out.
-ANN models work by epochs. A single epoch is one run of the current model, which then transfers some of its knowledge to the next epoch. This way, the model <b>learns</b> to become better (have less error).
+Mean squared error is a good loss function for a linear model; compiler will also put accuracy metrics out.<br>
+ANN models work by epochs. A single epoch is one run of the current model, which then transfers some of its knowledge to the next epoch. This way, the model <b>learns</b> to become better (have less error), which resembles the neural network of a biological brain.<br>
 The model will stop working if it can't find a higher accuracy within 50 epochs of the current best.
 <pre>
 model.fit(x_train_scaled, y_train, validation_split=0.2, epochs=350, callbacks=[early_stopping_monitor])

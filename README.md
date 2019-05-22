@@ -335,8 +335,7 @@ vif.round(1)
     </tr>
   </tbody>
 </table>
-<br>
-After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provides more information than y by itself so we're including carat into the model rather than y.<br>
+After 3 rounds of VIF calculation, variables <b>x, z, and y</b> are left out of model. x and z had the highest variance inflation on their respective rounds, and the variable <b>carat</b> provides more information than y by itself so we're including carat into the model rather than y.<br><br>
 Final collinearity table looks like this:
 <table border="1" class="dataframe">
   <thead>

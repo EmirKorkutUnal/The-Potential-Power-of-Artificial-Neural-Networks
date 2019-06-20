@@ -763,15 +763,15 @@ First we insert the actual data into the dataframe. Then we add predictions into
 <i>Here comes the moment of truth:</i>
 <pre>
 ResultCatcher['Actual'].sum()
-105995144
+>>>105995144
 ResultCatcher['LinearError'].sum()
-23072830.201535575
+>>>23072830.201535575
 ResultCatcher['GAMError'].sum()
-18760907.342161603
+>>>18760907.342161603
 ResultCatcher['PolynomError'].sum()
-10333892.45053555
+>>>10333892.45053555
 ResultCatcher['ANNError'].sum()
-7964400.5
+>>>7964400.5
 </pre>
 <b>ANN has done it!</b><br>
 In a dataset where the total price of diamonds is around 106 million $, total error of ANN is just around 8 million $, which is 2.3 million $ better than the next best model.<br><br>
